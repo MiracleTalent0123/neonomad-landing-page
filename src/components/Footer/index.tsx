@@ -32,28 +32,98 @@ const Footer = () => {
             <p className="font-size-md-4 fw-700 text-uppercase mb-4 fw-bold footer-menu-title">
               DOCUMENTATION
             </p>
-            <p className="font-size-sm-2 opacity-color mb-2">Tokenomics</p>
-            <p className="font-size-sm-2 opacity-color mb-2">Whitepaper</p>
-            <p className="font-size-sm-2 opacity-color mb-2">Smart contracts</p>
-            <p className="font-size-sm-2 opacity-color">Roadmap</p>
-            <p className="font-size-sm-2 opacity-color">Team</p>
+            <p className="font-size-sm-2 opacity-color mb-2">
+              <Link
+                to={{
+                  pathname:
+                    "https://docs.neonomad.finance/tokenomics-fundamentals/nni-tokenomics",
+                }}
+                target="_blank"
+              >
+                Tokenomics
+              </Link>
+            </p>
+            <p className="font-size-sm-2 opacity-color mb-2">
+              <Link
+                to={{
+                  pathname:
+                    "https://docs.neonomad.finance/tokenomics-fundamentals/whitepaper",
+                }}
+                target="_blank"
+              >
+                Whitepaper
+              </Link>
+            </p>
+            <p className="font-size-sm-2 opacity-color mb-2">
+              <Link
+                to={{
+                  pathname:
+                    "https://docs.neonomad.finance/nni-smart-contracts/nni-token-address",
+                }}
+                target="_blank"
+              >
+                Smart contracts
+              </Link>
+            </p>
+            <p className="font-size-sm-2 opacity-color mb-2">Roadmap</p>
+            <p className="font-size-sm-2 opacity-color mb-2">Team</p>
           </Box>
           <Box cssClasses={["col-md-2", "col-12", "mt-4", "mt-md-0"]}>
             <p className="font-size-md-4 fw-700 text-uppercase mb-4 fw-bold footer-menu-title">
               DEFI
             </p>
-            <p className="font-size-sm-2 opacity-color mb-2">Trade</p>
-            <p className="font-size-sm-2 opacity-color mb-2">Stake</p>
-            <p className="font-size-sm-2 opacity-color mb-2">Farm</p>
-            <p className="font-size-sm-2 opacity-color mb-2">Pools</p>
-            <p className="font-size-sm-2 opacity-color mb-2">Launchpad</p>
+            <p className="font-size-sm-2 opacity-color mb-2">
+              <Link
+                to={{ pathname: "https://app.neonomad.exchange" }}
+                target="_blank"
+              >
+                Trade
+              </Link>
+            </p>
+            <p className="font-size-sm-2 opacity-color mb-2">
+              <Link
+                to={{ pathname: "https://app.neonomad.exchange/staking" }}
+                target="_blank"
+              >
+                Stake
+              </Link>
+            </p>
+            <p className="font-size-sm-2 opacity-color mb-2">
+              <Link
+                to={{ pathname: "https://app.neonomad.exchange/farms/" }}
+                target="_blank"
+              >
+                Farm
+              </Link>
+            </p>
+            <p className="font-size-sm-2 opacity-color mb-2">
+              <Link
+                to={{ pathname: "https://app.neonomad.exchange/pools/" }}
+                target="_blank"
+              >
+                Pools
+              </Link>
+            </p>
+            <p className="font-size-sm-2 opacity-color mb-2">
+              <Link
+                to={{ pathname: "https://app.neonomad.exchange/nomadpad/" }}
+                target="_blank"
+              >
+                Launchpad
+              </Link>
+            </p>
           </Box>
           <Box cssClasses={["col-md-3", "col-12", "mt-4", "mt-md-0"]}>
             <p className="font-size-md-4 fw-700 text-uppercase mb-4 fw-bold footer-menu-title">
               TOOLS
             </p>
             <p className="font-size-sm-2 opacity-color mb-2">
-              Official Media Verification
+              <Link
+                to={{ pathname: "https://www.neonomad.finance/verification" }}
+                target="_blank"
+              >
+                Official Media Verification
+              </Link>
             </p>
           </Box>
           <Box cssClasses={["col-md-3", "col-12", "mt-4", "mt-md-0"]}>
@@ -70,12 +140,43 @@ const Footer = () => {
           </Box>
         </Flex>
       </Box>
-      <Box cssClasses={['footer-copyright']}>
-        <Flex direction={"row"} justifyContent="center" alignItems="center" cssClasses={['p-3']}>
-          <div className="mx-4">Copyright NeoNomad 2022</div>
-          <div className="mx-4">About the Company</div>
-          <div className="mx-4">Terms and conditions</div>
-          <div className="mx-4">dApp</div>
+      <Box cssClasses={["footer-copyright"]}>
+        <Flex
+          direction={"row"}
+          justifyContent="center"
+          alignItems="center"
+          cssClasses={["p-3"]}
+        >
+          <div className="mx-4">
+            <Link to="/">Copyright NeoNomad 2022</Link>
+          </div>
+          <div className="mx-4">
+            <Link
+              to={{ pathname: "https://docs.neonomad.finance/" }}
+              target="_blank"
+            >
+              About the Company
+            </Link>
+          </div>
+          <div className="mx-4">
+            <Link
+              to={{
+                pathname:
+                  "https://docs.neonomad.finance/neonomad-documentation/tokenomics-fundamentals/neonomad-terms-of-use",
+              }}
+              target="_blank"
+            >
+              Terms and conditions
+            </Link>
+          </div>
+          <div className="mx-4">
+            <Link
+              to={{ pathname: "https://app.neonomad.exchange" }}
+              target="_blank"
+            >
+              dApp
+            </Link>
+          </div>
         </Flex>
       </Box>
     </Box>

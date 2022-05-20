@@ -30,6 +30,11 @@ body {
 a {
   text-decoration: none;
   cursor: pointer;
+  color: white;
+}
+
+a:hover {
+  color: #b452df !important;
 }
 
 .container {

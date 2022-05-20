@@ -42,7 +42,12 @@ const Home = () => {
             <img src={TelegramIcon} alt="social icon" />
             <img src={TwitterIcon} alt="social icon" />
           </div>
-          <button className="btn-primary mt-4">BUY NNI</button>
+          <Link
+            to={{ pathname: "https://app.neonomad.exchange" }}
+            target="_blank"
+          >
+            <button className="btn-primary mt-4">BUY NNI</button>
+          </Link>
         </div>
       </div>
       <div className="container d-flex flex-wrap justify-content-center features-container">
@@ -90,15 +95,24 @@ const Home = () => {
         </div>
       </div>
       <div className="my-4 pb-4">
-        <div className="listed-logo-title fw-bold font-outfit text-center">POWERED BY</div>
+        <div className="listed-logo-title fw-bold font-outfit text-center">
+          POWERED BY
+        </div>
         <div className="col-md-8 m-auto d-flex flex-wrap align-items-center mt-4">
-          {POWERED.map((powered, index) => 
-            <div key={index} className="col-md-4 col-12 d-flex justify-content-center align-items-center py-2">
-              <Link to={powered.link}>
-                <img src={powered.img} alt="logo" style={{height: powered.height}} />
+          {POWERED.map((powered, index) => (
+            <div
+              key={index}
+              className="col-md-4 col-12 d-flex justify-content-center align-items-center py-2"
+            >
+              <Link to={{ pathname: powered.link }} target="_blank">
+                <img
+                  src={powered.img}
+                  alt="logo"
+                  style={{ height: powered.height }}
+                />
               </Link>
             </div>
-          )}
+          ))}
         </div>
       </div>
       <div className="pt-4 my-4">
@@ -125,8 +139,11 @@ const Home = () => {
             }}
           >
             {LISTED.map((listed, index) => (
-              <div key={index} className="p-4 h-100 d-flex justify-content-center align-items-center">
-                <Link to={listed.link}>
+              <div
+                key={index}
+                className="p-4 h-100 d-flex justify-content-center align-items-center"
+              >
+                <Link to={{ pathname: listed.link }} target="_blank">
                   <img src={listed.img} alt="listed logo" className="w-100" />
                 </Link>
               </div>
@@ -136,7 +153,7 @@ const Home = () => {
                 key={`second${index}`}
                 className="p-4 h-100 d-flex justify-content-center align-items-center"
               >
-                <Link to={listed.link}>
+                <Link to={{ pathname: listed.link }} target="_blank">
                   <img src={listed.img} alt="listed logo" className="w-100" />
                 </Link>
               </div>
@@ -158,9 +175,14 @@ const Home = () => {
               spirit and we value each Nomad that is part of our community!
             </p>
             <div className="mt-4">
-              <button className="btn-primary mt-4">
-                Buy NNI Native Tokens
-              </button>
+              <Link
+                to={{ pathname: "https://app.neonomad.exchange" }}
+                target="_blank"
+              >
+                <button className="btn-primary mt-4">
+                  Buy NNI Native Tokens
+                </button>
+              </Link>
             </div>
           </div>
           <div className="col-md-8 col-12 footer-row-bg">
